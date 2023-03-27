@@ -75,11 +75,11 @@ class _Login1State extends State<Login1> {
                 child: GestureDetector(
                   onTap: () {
                     Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => Login2(text: _textInput),
-            ),
-          );
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Login2(text: _textInput),
+                      ),
+                    );
                   },
                   child: Container(
                     height: 50,
@@ -100,6 +100,137 @@ class _Login1State extends State<Login1> {
                       ),
                     ),
                   ),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Container(
+                    height: 1,
+                    width: 120,
+                    color: Colors.black,
+                  ),
+                  Text(
+                    'or',
+                    style: GoogleFonts.roboto(
+                        color: Colors.black,
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Container(
+                    height: 1,
+                    width: 120,
+                    color: Colors.black,
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 27,
+              ),
+              Align(
+                alignment: Alignment.center,
+                child: GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    height: 50,
+                    width: 350,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(90),
+                        gradient: LinearGradient(
+                            colors: [
+                              Color.fromRGBO(201, 197, 254, 1),
+                              Color.fromRGBO(249, 211, 253, 1),
+                              Color.fromRGBO(249, 211, 253, 1)
+                            ],
+                            begin: Alignment.centerLeft,
+                            end: Alignment.centerRight)),
+                    child: Center(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset('assets/icons/newfacebook.png'),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            'Continue with Facebook',
+                            style: GoogleFonts.roboto(
+                                fontSize: 12,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Align(
+                alignment: Alignment.center,
+                child: GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    height: 50,
+                    width: 350,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(90),
+                        gradient: LinearGradient(
+                            colors: [
+                              Color.fromRGBO(201, 197, 254, 1),
+                              Color.fromRGBO(249, 211, 253, 1),
+                              Color.fromRGBO(249, 211, 253, 1)
+                            ],
+                            begin: Alignment.centerLeft,
+                            end: Alignment.centerRight)),
+                    child: Center(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset('assets/icons/google_icon.png'),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            'Continue with Google',
+                            style: GoogleFonts.roboto(
+                                fontSize: 12,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Align(
+                alignment: Alignment.center,
+                child: RichText(
+                  text: TextSpan(children: [
+                    TextSpan(
+                      text: 'Don’t have an account?',
+                      style: GoogleFonts.roboto(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.black),
+                    ),
+                    TextSpan(
+                      text: 'Sign up',
+                      style: GoogleFonts.roboto(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                          color: Color.fromRGBO(53, 15, 80, 1)),
+                    ),
+                  ]),
                 ),
               ),
             ],
