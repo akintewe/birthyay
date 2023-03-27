@@ -4,4 +4,5 @@ abstract class _AppRoutePaths {
   static const String welcomeScreen = '/welcomeScreen';
   static const String emptyPage = '/emptyPage';
   static const String splashScren = '/splashScreen';
+  static const String login1 = '/login1';
 }

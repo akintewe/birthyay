@@ -1,4 +1,5 @@
 import 'package:birthyay/app/model/views/emptypage.dart';
+import 'package:birthyay/app/model/views/logins/views/login1.dart';
 import 'package:birthyay/app/model/views/splashscreen/splashscreen.dart';
 import 'package:birthyay/app/model/views/welcome/welcome.dart';
 import 'package:birthyay/routes/app_routes.dart';
@@ -54,6 +55,13 @@ final GoRouter _router =
     name: Routes.welcomeScreen,
     builder: (context, state) {
       return const WelcomeScreen();
+    },
+  ),
+  GoRoute(
+    path: _AppRoutePaths.login1,
+    name: Routes.login1,
+    builder: (context, state) {
+      return Login1();
     },
   )
 ]);

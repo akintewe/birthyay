@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:path_provider/path_provider.dart';
 
@@ -90,7 +91,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             Align(
               alignment: Alignment.center,
               child: GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  context.go('/login1');
+                },
                 child: Container(
                   height: 45,
                   width: 350,
