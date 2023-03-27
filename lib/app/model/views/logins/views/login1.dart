@@ -1,4 +1,5 @@
 import 'package:birthyay/app/model/views/logins/views/login2.dart';
+import 'package:birthyay/app/model/views/logins/views/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -13,7 +14,7 @@ class Login1 extends StatefulWidget {
 }
 
 class _Login1State extends State<Login1> {
-  late String _textInput;
+  late String? _textInput;
 
   @override
   Widget build(BuildContext context) {
@@ -77,7 +78,7 @@ class _Login1State extends State<Login1> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => Login2(text: _textInput),
+                        builder: (context) => Login2(text: _textInput!),
                       ),
                     );
                   },
@@ -215,8 +216,9 @@ class _Login1State extends State<Login1> {
               Align(
                 alignment: Alignment.center,
                 child: InkWell(
-                  onTap: (){
-                    
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Signup()));
                   },
                   child: RichText(
                     text: TextSpan(children: [
