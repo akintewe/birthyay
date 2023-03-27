@@ -55,7 +55,7 @@ class _Login1State extends State<Login1> {
                         _textInput = text;
                       });
                     },
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(color: Colors.black),
                     decoration: InputDecoration(
                       hintText: 'Email',
                       hintStyle:
@@ -214,23 +214,28 @@ class _Login1State extends State<Login1> {
               ),
               Align(
                 alignment: Alignment.center,
-                child: RichText(
-                  text: TextSpan(children: [
-                    TextSpan(
-                      text: 'Don’t have an account?',
-                      style: GoogleFonts.roboto(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w400,
-                          color: Colors.black),
-                    ),
-                    TextSpan(
-                      text: 'Sign up',
-                      style: GoogleFonts.roboto(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w500,
-                          color: Color.fromRGBO(53, 15, 80, 1)),
-                    ),
-                  ]),
+                child: InkWell(
+                  onTap: (){
+                    
+                  },
+                  child: RichText(
+                    text: TextSpan(children: [
+                      TextSpan(
+                        text: 'Don’t have an account?',
+                        style: GoogleFonts.roboto(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.black),
+                      ),
+                      TextSpan(
+                        text: 'Sign up',
+                        style: GoogleFonts.roboto(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                            color: Color.fromRGBO(53, 15, 80, 1)),
+                      ),
+                    ]),
+                  ),
                 ),
               ),
             ],

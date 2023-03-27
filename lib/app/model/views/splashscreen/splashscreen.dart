@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 import 'package:go_router/go_router.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -27,6 +26,21 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Icon(Icons.party_mode)));
+    return Scaffold(
+        body: Stack(
+      fit: StackFit.expand,
+      children: [
+        Image.asset(
+          'assets/images/bg.png',
+          fit: BoxFit.cover,
+        ),
+        Center(
+            child: Image.asset(
+          'assets/images/splash_person.png',
+          fit: BoxFit.fill,
+          height: 130,
+        )),
+      ],
+    ));
   }
 }
