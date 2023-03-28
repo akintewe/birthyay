@@ -1,3 +1,4 @@
+import 'package:birthyay/app/model/views/homescreen/views/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -11,7 +12,7 @@ class Signup extends StatefulWidget {
 }
 
 class _SignupState extends State<Signup> {
-  late String _nameInput;
+  late String? _nameInput;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -112,7 +113,14 @@ class _SignupState extends State<Signup> {
               Align(
                 alignment: Alignment.center,
                 child: GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => HomePage(text: _nameInput!),
+                      ),
+                    );
+                  },
                   child: Container(
                     height: 50,
                     width: 350,
