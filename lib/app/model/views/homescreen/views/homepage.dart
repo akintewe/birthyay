@@ -101,149 +101,293 @@ class _HomePageState extends State<HomePage> {
           SizedBox(
             height: 24,
           ),
-          SingleChildScrollView(
-            child: Row(
-              children: [
-                Container(
-                  height: 205,
-                  width: 350,
-                  color: Colors.white,
-                  child: Column(
-                    children: [
-                      RichText(
-                          text: TextSpan(children: [
-                        TextSpan(
-                          text: '27.March',
-                          style: GoogleFonts.roboto(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.black,
-                          ),
-                        ),
-                        WidgetSpan(
-                            child: SizedBox(
-                          width: 10,
-                        )),
-                        TextSpan(
-                          text: 'Sunday',
-                          style: GoogleFonts.roboto(
-                            fontSize: 10,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.black,
-                          ),
-                        )
-                      ])),
-                      Container(
-                        height: 175,
-                        width: 350,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage(
-                                    'assets/images/grandpaback.png')),
-                            borderRadius: BorderRadius.circular(20)),
-                        child: Stack(
+          Padding(
+            padding: const EdgeInsets.only(left: 10),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Container(
+                    height: 205,
+                    width: 350,
+                    color: Colors.transparent,
+                    child: Column(
+                      children: [
+                        Row(
                           children: [
-                            Positioned(
-                                left: 20,
-                                top: 15,
-                                child:
-                                    Image.asset('assets/images/grandpa.png')),
-                            Positioned(
-                                right: 20,
-                                top: 15,
-                                child:
-                                    Image.asset('assets/icons/whiteheart.png')),
-                            Positioned(
-                                bottom: 70,
-                                left: 20,
-                                child: Text(
-                                  'Grand Pops',
-                                  style: GoogleFonts.roboto(
-                                      fontWeight: FontWeight.w700,
-                                      color: Colors.white,
-                                      fontSize: 16),
-                                )),
-                            Positioned(
-                                bottom: 50,
-                                left: 20,
-                                child: Text(
-                                  'March, 1940',
-                                  style: GoogleFonts.roboto(
-                                      fontWeight: FontWeight.w400,
-                                      color: Colors.white,
-                                      fontSize: 12),
-                                )),
-                            Positioned(
-                                bottom: 70,
-                                right: 20,
-                                child: Text(
-                                  '83',
-                                  style: GoogleFonts.roboto(
-                                      fontWeight: FontWeight.w800,
-                                      color: Colors.white,
-                                      fontSize: 24),
-                                )),
-                            Positioned(
-                                bottom: 50,
-                                right: 20,
-                                child: Text(
-                                  'Today',
-                                  style: GoogleFonts.roboto(
-                                      fontWeight: FontWeight.w400,
-                                      color: Colors.white,
-                                      fontSize: 12),
-                                )),
-                            Positioned(
-                                right: 150,
-                                bottom: 10,
-                                child: Image.asset(
-                                  'assets/icons/yaygift.png',
-                                )),
-                            Positioned(
-                                right: 152,
-                                bottom: 7,
-                                child: Text(
-                                  'Send a Gift',
-                                  style: GoogleFonts.roboto(
-                                      color: Colors.white, fontSize: 7),
-                                )),
-                            Positioned(
-                                right: 110,
-                                bottom: 10,
-                                child: Image.asset(
-                                  'assets/icons/messenger.png',
-                                )),
-                            Positioned(
-                                right: 108,
-                                bottom: 7,
-                                child: Text(
-                                  'Messenger',
-                                  style: GoogleFonts.roboto(
-                                      color: Colors.white, fontSize: 7),
-                                )),
-                            Positioned(
-                                right: 200,
-                                bottom: 10,
-                                child: Image.asset(
-                                    'assets/icons/whatsappicon.png')),
-                            Positioned(
-                                right: 201,
-                                bottom: 7,
-                                child: Text(
-                                  'Whatsapp',
-                                  style: GoogleFonts.roboto(
-                                      color: Colors.white, fontSize: 7),
-                                )),
-                                Positioned(child: Image.asset('assets/images/cakes.png'))
+                            SizedBox(
+                              width: 10,
+                            ),
+                            RichText(
+                                text: TextSpan(children: [
+                              TextSpan(
+                                text: '27.March',
+                                style: GoogleFonts.roboto(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black,
+                                ),
+                              ),
+                              WidgetSpan(
+                                  child: SizedBox(
+                                width: 10,
+                              )),
+                              TextSpan(
+                                text: 'Sunday',
+                                style: GoogleFonts.roboto(
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black,
+                                ),
+                              )
+                            ])),
                           ],
                         ),
-                      ),
-                    ],
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          height: 175,
+                          width: 350,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage(
+                                      'assets/images/grandpaback.png')),
+                              borderRadius: BorderRadius.circular(20)),
+                          child: Stack(
+                            children: [
+                              Positioned(
+                                  left: 20,
+                                  top: 15,
+                                  child:
+                                      Image.asset('assets/images/grandpa.png')),
+                              Positioned(
+                                  right: 20,
+                                  top: 15,
+                                  child: Image.asset(
+                                      'assets/icons/whiteheart.png')),
+                              Positioned(
+                                  bottom: 70,
+                                  left: 20,
+                                  child: Text(
+                                    'Grand Pops',
+                                    style: GoogleFonts.roboto(
+                                        fontWeight: FontWeight.w700,
+                                        color: Colors.white,
+                                        fontSize: 16),
+                                  )),
+                              Positioned(
+                                  bottom: 50,
+                                  left: 20,
+                                  child: Text(
+                                    'March, 1940',
+                                    style: GoogleFonts.roboto(
+                                        fontWeight: FontWeight.w400,
+                                        color: Colors.white,
+                                        fontSize: 12),
+                                  )),
+                              Positioned(
+                                  bottom: 70,
+                                  right: 20,
+                                  child: Text(
+                                    '83',
+                                    style: GoogleFonts.roboto(
+                                        fontWeight: FontWeight.w800,
+                                        color: Colors.white,
+                                        fontSize: 24),
+                                  )),
+                              Positioned(
+                                  bottom: 50,
+                                  right: 20,
+                                  child: Text(
+                                    'Today',
+                                    style: GoogleFonts.roboto(
+                                        fontWeight: FontWeight.w400,
+                                        color: Colors.white,
+                                        fontSize: 12),
+                                  )),
+                              Positioned(
+                                  right: 150,
+                                  bottom: 10,
+                                  child: Image.asset(
+                                    'assets/icons/yaygift.png',
+                                  )),
+                              Positioned(
+                                  right: 152,
+                                  bottom: 7,
+                                  child: Text(
+                                    'Send a Gift',
+                                    style: GoogleFonts.roboto(
+                                        color: Colors.white, fontSize: 7),
+                                  )),
+                              Positioned(
+                                  right: 110,
+                                  bottom: 10,
+                                  child: Image.asset(
+                                    'assets/icons/messenger.png',
+                                  )),
+                              Positioned(
+                                  right: 108,
+                                  bottom: 7,
+                                  child: Text(
+                                    'Messenger',
+                                    style: GoogleFonts.roboto(
+                                        color: Colors.white, fontSize: 7),
+                                  )),
+                              Positioned(
+                                  right: 200,
+                                  bottom: 10,
+                                  child: Image.asset(
+                                      'assets/icons/whatsappicon.png')),
+                              Positioned(
+                                  right: 201,
+                                  bottom: 7,
+                                  child: Text(
+                                    'Whatsapp',
+                                    style: GoogleFonts.roboto(
+                                        color: Colors.white, fontSize: 7),
+                                  )),
+                              Positioned(
+                                  child: Image.asset('assets/images/cakes.png'))
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Container(
+                    height: 205,
+                    width: 350,
+                    color: Colors.transparent,
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            SizedBox(
+                              width: 10,
+                            ),
+                            RichText(
+                                text: TextSpan(children: [
+                              TextSpan(
+                                text: '28.March',
+                                style: GoogleFonts.roboto(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black,
+                                ),
+                              ),
+                              WidgetSpan(
+                                  child: SizedBox(
+                                width: 10,
+                              )),
+                              TextSpan(
+                                text: 'Monday',
+                                style: GoogleFonts.roboto(
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black,
+                                ),
+                              )
+                            ])),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          height: 175,
+                          width: 350,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage(
+                                      'assets/images/secondbackground.png')),
+                              borderRadius: BorderRadius.circular(20)),
+                          child: Stack(
+                            children: [
+                              Positioned(
+                                  left: 25,
+                                  bottom: 10,
+                                  child: Image.asset(
+                                      'assets/images/ballonback.png'))
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Container(
+                    height: 205,
+                    width: 350,
+                    color: Colors.transparent,
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            SizedBox(
+                              width: 10,
+                            ),
+                            RichText(
+                                text: TextSpan(children: [
+                              TextSpan(
+                                text: '29.March',
+                                style: GoogleFonts.roboto(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black,
+                                ),
+                              ),
+                              WidgetSpan(
+                                  child: SizedBox(
+                                width: 10,
+                              )),
+                              TextSpan(
+                                text: 'Tuesday',
+                                style: GoogleFonts.roboto(
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black,
+                                ),
+                              )
+                            ])),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          height: 175,
+                          width: 350,
+                          decoration: BoxDecoration(
+                              color: Color.fromRGBO(255, 204, 112, 0.96),
+                              borderRadius: BorderRadius.circular(20)),
+                          child: Stack(
+                            children: [
+                              Positioned(
+                                  left: 25,
+                                  bottom: 10,
+                                  child: Image.asset(
+                                      'assets/images/ballonback.png'))
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
-          )
+          ),
+          Row(
+            children: [
+              Text('Upcoming birthdays', style: GoogleFonts.roboto(),)
+            ],
+          ),
         ],
       ),
     );
