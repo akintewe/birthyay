@@ -41,6 +41,8 @@ dependencies:
   google_fonts: 
   
   path: ^1.8.2
+  animated_bottom_navigation_bar: ^1.2.0
+  
 
 dev_dependencies:
   flutter_test:
