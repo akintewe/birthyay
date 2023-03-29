@@ -153,7 +153,88 @@ class _HomePageState extends State<HomePage> {
                                 top: 15,
                                 child:
                                     Image.asset('assets/icons/whiteheart.png')),
-                                    Positioned(child: Text(''))
+                            Positioned(
+                                bottom: 70,
+                                left: 20,
+                                child: Text(
+                                  'Grand Pops',
+                                  style: GoogleFonts.roboto(
+                                      fontWeight: FontWeight.w700,
+                                      color: Colors.white,
+                                      fontSize: 16),
+                                )),
+                            Positioned(
+                                bottom: 50,
+                                left: 20,
+                                child: Text(
+                                  'March, 1940',
+                                  style: GoogleFonts.roboto(
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.white,
+                                      fontSize: 12),
+                                )),
+                            Positioned(
+                                bottom: 70,
+                                right: 20,
+                                child: Text(
+                                  '83',
+                                  style: GoogleFonts.roboto(
+                                      fontWeight: FontWeight.w800,
+                                      color: Colors.white,
+                                      fontSize: 24),
+                                )),
+                            Positioned(
+                                bottom: 50,
+                                right: 20,
+                                child: Text(
+                                  'Today',
+                                  style: GoogleFonts.roboto(
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.white,
+                                      fontSize: 12),
+                                )),
+                            Positioned(
+                                right: 150,
+                                bottom: 10,
+                                child: Image.asset(
+                                  'assets/icons/yaygift.png',
+                                )),
+                            Positioned(
+                                right: 152,
+                                bottom: 7,
+                                child: Text(
+                                  'Send a Gift',
+                                  style: GoogleFonts.roboto(
+                                      color: Colors.white, fontSize: 7),
+                                )),
+                            Positioned(
+                                right: 110,
+                                bottom: 10,
+                                child: Image.asset(
+                                  'assets/icons/messenger.png',
+                                )),
+                            Positioned(
+                                right: 108,
+                                bottom: 7,
+                                child: Text(
+                                  'Messenger',
+                                  style: GoogleFonts.roboto(
+                                      color: Colors.white, fontSize: 7),
+                                )),
+                            Positioned(
+                                right: 200,
+                                bottom: 10,
+                                child: Image.asset(
+                                    'assets/icons/whatsappicon.png')),
+                            Positioned(
+                                right: 201,
+                                bottom: 7,
+                                child: Text(
+                                  'Whatsapp',
+                                  style: GoogleFonts.roboto(
+                                      color: Colors.white, fontSize: 7),
+                                )),
+                                Positioned(child: Image.asset('assets/images/cakes.png'))
                           ],
                         ),
                       ),
