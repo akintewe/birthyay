@@ -98,7 +98,71 @@ class _HomePageState extends State<HomePage> {
               DayWidget(day: 'Year'),
             ],
           ),
-          SizedBox(),
+          SizedBox(
+            height: 24,
+          ),
+          SingleChildScrollView(
+            child: Row(
+              children: [
+                Container(
+                  height: 205,
+                  width: 350,
+                  color: Colors.white,
+                  child: Column(
+                    children: [
+                      RichText(
+                          text: TextSpan(children: [
+                        TextSpan(
+                          text: '27.March',
+                          style: GoogleFonts.roboto(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black,
+                          ),
+                        ),
+                        WidgetSpan(
+                            child: SizedBox(
+                          width: 10,
+                        )),
+                        TextSpan(
+                          text: 'Sunday',
+                          style: GoogleFonts.roboto(
+                            fontSize: 10,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black,
+                          ),
+                        )
+                      ])),
+                      Container(
+                        height: 175,
+                        width: 350,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage(
+                                    'assets/images/grandpaback.png')),
+                            borderRadius: BorderRadius.circular(20)),
+                        child: Stack(
+                          children: [
+                            Positioned(
+                                left: 20,
+                                top: 15,
+                                child:
+                                    Image.asset('assets/images/grandpa.png')),
+                            Positioned(
+                                right: 20,
+                                top: 15,
+                                child:
+                                    Image.asset('assets/icons/whiteheart.png')),
+                                    Positioned(child: Text(''))
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );
