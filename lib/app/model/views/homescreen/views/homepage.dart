@@ -21,7 +21,42 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      bottomNavigationBar: Stack(
+        children: [
+          BottomNavigationBar(
+            currentIndex: _currentIndex,
+            onTap: (index) {
+              setState(() {
+                _currentIndex = index;
+              });
+            },
+            items: [
+              BottomNavigationBarItem(
+                icon: Image.asset('assets/icons/homep.png',
+                    width: 24, height: 24),
+                label: 'Home',
+              ),
+              BottomNavigationBarItem(
+                icon: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.purple, width: 5),
+                    shape: BoxShape.circle,
+                  ),
+                  child: Image.asset('assets/icons/addbirthday.png',
+                      width: 55, height: 48),
+                  padding: EdgeInsets.all(10),
+                ),
+                label: 'Add birthday',
+              ),
+              BottomNavigationBarItem(
+                icon: Image.asset('assets/icons/notifications.png',
+                    width: 24, height: 24),
+                label: 'Profile',
+              ),
+            ],
+          ),
+        ],
+      ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
