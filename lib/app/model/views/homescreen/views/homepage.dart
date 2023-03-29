@@ -383,10 +383,102 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
+          SizedBox(
+            height: 20,
+          ),
           Row(
             children: [
-              Text('Upcoming birthdays', style: GoogleFonts.roboto(),)
+              SizedBox(
+                width: 20,
+              ),
+              Text(
+                'Upcoming birthdays',
+                style: GoogleFonts.roboto(
+                  fontSize: 12,
+                  color: Colors.black,
+                  fontWeight: FontWeight.w500,
+                ),
+              )
             ],
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 10, right: 10),
+            child: Card(
+                elevation: 1,
+                color: Color.fromRGBO(247, 231, 255, 1),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Row(
+                    children: [
+                      Image.asset('assets/images/friends_img.png'),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Column(
+                        children: [
+                          Text(
+                            'Nimnomiobong Ntatam',
+                            style: GoogleFonts.roboto(
+                                color: Color.fromRGBO(53, 15, 80, 1),
+                                fontWeight: FontWeight.w500,
+                                fontSize: 12),
+                          ),
+                          SizedBox(
+                            height: 8,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 80),
+                            child: RichText(
+                                text: TextSpan(children: [
+                              TextSpan(
+                                text: '02',
+                                style: GoogleFonts.roboto(
+                                  fontWeight: FontWeight.w700,
+                                  color: Color.fromRGBO(53, 15, 80, 1),
+                                  fontSize: 20,
+                                ),
+                              ),
+                              TextSpan(
+                                text: '.April',
+                                style: GoogleFonts.roboto(
+                                  fontWeight: FontWeight.w500,
+                                  color: Color.fromRGBO(53, 15, 80, 1),
+                                  fontSize: 10,
+                                ),
+                              ),
+                            ])),
+                          )
+                        ],
+                      ),
+                      SizedBox(
+                        width: 54,
+                      ),
+                      Column(
+                        children: [
+                          Text(
+                            '22yrs',
+                            style: GoogleFonts.roboto(
+                                fontSize: 20, fontWeight: FontWeight.w700),
+                          ),
+                          Text(
+                            'in 5days',
+                            style: GoogleFonts.roboto(
+                              fontSize: 10,
+                              fontWeight: FontWeight.w500,
+                              color: Color.fromRGBO(53, 15, 80, 1),
+                            ),
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
+                )),
           ),
         ],
       ),
