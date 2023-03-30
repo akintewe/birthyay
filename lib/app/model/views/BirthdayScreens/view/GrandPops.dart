@@ -120,6 +120,96 @@ class _GrandPopsState extends State<GrandPops> {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 20,
+              ),
+              Align(
+                alignment: Alignment.center,
+                child: Container(
+                  height: 50,
+                  width: 350,
+                  decoration: BoxDecoration(
+                      color: Color.fromRGBO(247, 231, 255, 1),
+                      borderRadius: BorderRadius.circular(15)),
+                  child: Row(
+                    children: [
+                      SizedBox(
+                        width: 23.11,
+                      ),
+                      Image.asset('assets/icons/cake.png'),
+                      SizedBox(
+                        width: 23,
+                      ),
+                      Text(
+                        'Birthday',
+                        style: GoogleFonts.roboto(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 12,
+                            color: Color.fromRGBO(53, 15, 80, 1)),
+                      ),
+                      SizedBox(
+                        width: 127,
+                      ),
+                      Text(
+                        '27 March, 1940',
+                        style: GoogleFonts.roboto(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 12,
+                            color: Color.fromRGBO(53, 15, 80, 1)),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Align(
+                alignment: Alignment.center,
+                child: Container(
+                  height: 50,
+                  width: 350,
+                  decoration: BoxDecoration(
+                      color: Color.fromRGBO(247, 231, 255, 1),
+                      borderRadius: BorderRadius.circular(15)),
+                  child: Row(
+                    children: [
+                      SizedBox(
+                        width: 23.11,
+                      ),
+                      Image.asset('assets/icons/call.png'),
+                      SizedBox(
+                        width: 23,
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            '+234 815 123 0000',
+                            style: GoogleFonts.roboto(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 12,
+                                color: Color.fromRGBO(53, 15, 80, 1)),
+                          ),
+                          SizedBox(
+                            height: 3,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 68),
+                            child: Text(
+                              'Mobile',
+                              style: GoogleFonts.roboto(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 12,
+                                  color: Color.fromRGBO(53, 15, 80, 1)),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ],
