@@ -96,10 +96,65 @@ class _GrandPopsState extends State<GrandPops> {
                     fontSize: 12,
                   ),
                 ),
-              )
+              ),
+              Align(
+                alignment: Alignment.center,
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Social_widget(
+                        icon: 'assets/icons/call.png',
+                      ),
+                      Social_widget(
+                        icon: 'assets/icons/whatsapp.png',
+                      ),
+                      Social_widget(
+                        icon: 'assets/icons/facebook.png',
+                      ),
+                      Social_widget(
+                        icon: 'assets/icons/ph_gift-light.png',
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ],
+      ),
+    );
+  }
+}
+
+class Social_widget extends StatefulWidget {
+  final String icon;
+  const Social_widget({
+    Key? key,
+    required this.icon,
+  }) : super(key: key);
+
+  @override
+  State<Social_widget> createState() => _Social_widgetState();
+}
+
+class _Social_widgetState extends State<Social_widget> {
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {},
+      child: Container(
+        height: 50,
+        width: 50,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15),
+            border: Border.all(
+              color: Color.fromRGBO(110, 37, 136, 1),
+            )),
+        child: Center(
+          child: Image.asset(widget.icon),
+        ),
       ),
     );
   }
