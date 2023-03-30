@@ -117,7 +117,7 @@ class _SignupState extends State<Signup> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => HomePage(text: _nameInput!),
+                        builder: (context) => HomePage(),
                       ),
                     );
                   },

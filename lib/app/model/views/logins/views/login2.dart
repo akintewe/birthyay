@@ -1,7 +1,6 @@
 import 'package:birthyay/app/model/views/homescreen/views/homepage.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 
 class Login2 extends StatefulWidget {
@@ -65,7 +64,7 @@ class _Login2State extends State<Login2> {
                             color: Color.fromRGBO(53, 15, 80, 1)),
                       ),
                       Text(
-                        widget.text ?? 'No email',
+                        widget.text ,
                         style: GoogleFonts.roboto(
                             fontSize: 13,
                             fontWeight: FontWeight.w500,
@@ -108,7 +107,7 @@ class _Login2State extends State<Login2> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => HomePage(text: 'User')));
+                            builder: (context) => HomePage()));
                   },
                   child: Container(
                     height: 50,

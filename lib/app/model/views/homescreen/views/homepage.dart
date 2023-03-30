@@ -5,11 +5,15 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../BirthdayScreens/view/GrandPops.dart';
+import '../../addBirthday/views/addBirthday.dart';
+import '../../notification/view/notification_screen.dart';
 import '../widgets/card_widget.dart';
 
 class HomePage extends StatefulWidget {
-  final String text;
-  const HomePage({super.key, required this.text});
+  const HomePage({
+    super.key,
+  });
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -18,12 +22,38 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _currentIndex = 0;
 
+  List<Widget> _screens = [];
+
+  @override
+  void initState() {
+    super.initState();
+    _screens = [
+      _buildHomeScreen(),
+      AddBirthday(),
+      NotificationScreen(),
+    ];
+  }
+
+  Widget _buildHomeScreen() {
+    return HomeScreen(
+      text: 'User',
+      onContainerTap: () => setState(() {
+        _screens[0] = GrandPops();
+      }),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: IndexedStack(
+        index: _currentIndex,
+        children: _screens,
+      ),
       bottomNavigationBar: Stack(
         children: [
           BottomNavigationBar(
+            selectedItemColor: Color.fromRGBO(53, 15, 80, 1),
             currentIndex: _currentIndex,
             onTap: (index) {
               setState(() {
@@ -39,24 +69,45 @@ class _HomePageState extends State<HomePage> {
               BottomNavigationBarItem(
                 icon: Container(
                   decoration: BoxDecoration(
-                    border: Border.all(color: Colors.purple, width: 5),
+                    border: Border.all(color: Colors.purple, width: 4),
                     shape: BoxShape.circle,
                   ),
                   child: Image.asset('assets/icons/addbirthday.png',
-                      width: 55, height: 48),
+                      width: 48, height: 48),
                   padding: EdgeInsets.all(10),
                 ),
-                label: 'Add birthday',
+                label: 'Add Birthday',
               ),
               BottomNavigationBarItem(
                 icon: Image.asset('assets/icons/notifications.png',
                     width: 24, height: 24),
-                label: 'Profile',
+                label: 'Notification',
               ),
             ],
           ),
         ],
       ),
+    );
+  }
+}
+
+class HomeScreen extends StatefulWidget {
+  final String text;
+  final VoidCallback? onContainerTap;
+  const HomeScreen({
+    super.key,
+    required this.text,
+    required this.onContainerTap,
+  });
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
@@ -189,111 +240,114 @@ class _HomePageState extends State<HomePage> {
                           SizedBox(
                             height: 10,
                           ),
-                          Container(
-                            height: 175,
-                            width: 350,
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: AssetImage(
-                                        'assets/images/newback.png')),
-                                borderRadius: BorderRadius.circular(20)),
-                            child: Stack(
-                              children: [
-                                Positioned(
-                                    left: 20,
-                                    top: 15,
-                                    child: Image.asset(
-                                        'assets/images/grandpa.png')),
-                                Positioned(
-                                    right: 20,
-                                    top: 15,
-                                    child: Image.asset(
-                                        'assets/icons/whiteheart.png')),
-                                Positioned(
-                                    bottom: 70,
-                                    left: 20,
-                                    child: Text(
-                                      'Grand Pops',
-                                      style: GoogleFonts.roboto(
-                                          fontWeight: FontWeight.w700,
-                                          color: Colors.white,
-                                          fontSize: 16),
-                                    )),
-                                Positioned(
-                                    bottom: 50,
-                                    left: 20,
-                                    child: Text(
-                                      'March, 1940',
-                                      style: GoogleFonts.roboto(
-                                          fontWeight: FontWeight.w400,
-                                          color: Colors.white,
-                                          fontSize: 12),
-                                    )),
-                                Positioned(
-                                    bottom: 70,
-                                    right: 20,
-                                    child: Text(
-                                      '83',
-                                      style: GoogleFonts.roboto(
-                                          fontWeight: FontWeight.w800,
-                                          color: Colors.white,
-                                          fontSize: 24),
-                                    )),
-                                Positioned(
-                                    bottom: 50,
-                                    right: 20,
-                                    child: Text(
-                                      'Today',
-                                      style: GoogleFonts.roboto(
-                                          fontWeight: FontWeight.w400,
-                                          color: Colors.white,
-                                          fontSize: 12),
-                                    )),
-                                Positioned(
-                                    right: 150,
-                                    bottom: 10,
-                                    child: Image.asset(
-                                      'assets/icons/yaygift.png',
-                                    )),
-                                Positioned(
-                                    right: 152,
-                                    bottom: 7,
-                                    child: Text(
-                                      'Send a Gift',
-                                      style: GoogleFonts.roboto(
-                                          color: Colors.white, fontSize: 7),
-                                    )),
-                                Positioned(
-                                    right: 110,
-                                    bottom: 10,
-                                    child: Image.asset(
-                                      'assets/icons/messenger.png',
-                                    )),
-                                Positioned(
-                                    right: 108,
-                                    bottom: 7,
-                                    child: Text(
-                                      'Messenger',
-                                      style: GoogleFonts.roboto(
-                                          color: Colors.white, fontSize: 7),
-                                    )),
-                                Positioned(
-                                    right: 200,
-                                    bottom: 10,
-                                    child: Image.asset(
-                                        'assets/icons/whatsappicon.png')),
-                                Positioned(
-                                    right: 201,
-                                    bottom: 7,
-                                    child: Text(
-                                      'Whatsapp',
-                                      style: GoogleFonts.roboto(
-                                          color: Colors.white, fontSize: 7),
-                                    )),
-                                Positioned(
-                                    child:
-                                        Image.asset('assets/images/cakes.png'))
-                              ],
+                          GestureDetector(
+                            onTap: widget.onContainerTap,
+                            child: Container(
+                              height: 175,
+                              width: 350,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/images/newback.png')),
+                                  borderRadius: BorderRadius.circular(20)),
+                              child: Stack(
+                                children: [
+                                  Positioned(
+                                      left: 20,
+                                      top: 15,
+                                      child: Image.asset(
+                                          'assets/images/grandpa.png')),
+                                  Positioned(
+                                      right: 20,
+                                      top: 15,
+                                      child: Image.asset(
+                                          'assets/icons/whiteheart.png')),
+                                  Positioned(
+                                      bottom: 70,
+                                      left: 20,
+                                      child: Text(
+                                        'Grand Pops',
+                                        style: GoogleFonts.roboto(
+                                            fontWeight: FontWeight.w700,
+                                            color: Colors.white,
+                                            fontSize: 16),
+                                      )),
+                                  Positioned(
+                                      bottom: 50,
+                                      left: 20,
+                                      child: Text(
+                                        'March, 1940',
+                                        style: GoogleFonts.roboto(
+                                            fontWeight: FontWeight.w400,
+                                            color: Colors.white,
+                                            fontSize: 12),
+                                      )),
+                                  Positioned(
+                                      bottom: 70,
+                                      right: 20,
+                                      child: Text(
+                                        '83',
+                                        style: GoogleFonts.roboto(
+                                            fontWeight: FontWeight.w800,
+                                            color: Colors.white,
+                                            fontSize: 24),
+                                      )),
+                                  Positioned(
+                                      bottom: 50,
+                                      right: 20,
+                                      child: Text(
+                                        'Today',
+                                        style: GoogleFonts.roboto(
+                                            fontWeight: FontWeight.w400,
+                                            color: Colors.white,
+                                            fontSize: 12),
+                                      )),
+                                  Positioned(
+                                      right: 150,
+                                      bottom: 10,
+                                      child: Image.asset(
+                                        'assets/icons/yaygift.png',
+                                      )),
+                                  Positioned(
+                                      right: 152,
+                                      bottom: 7,
+                                      child: Text(
+                                        'Send a Gift',
+                                        style: GoogleFonts.roboto(
+                                            color: Colors.white, fontSize: 7),
+                                      )),
+                                  Positioned(
+                                      right: 110,
+                                      bottom: 10,
+                                      child: Image.asset(
+                                        'assets/icons/messenger.png',
+                                      )),
+                                  Positioned(
+                                      right: 108,
+                                      bottom: 7,
+                                      child: Text(
+                                        'Messenger',
+                                        style: GoogleFonts.roboto(
+                                            color: Colors.white, fontSize: 7),
+                                      )),
+                                  Positioned(
+                                      right: 200,
+                                      bottom: 10,
+                                      child: Image.asset(
+                                          'assets/icons/whatsappicon.png')),
+                                  Positioned(
+                                      right: 201,
+                                      bottom: 7,
+                                      child: Text(
+                                        'Whatsapp',
+                                        style: GoogleFonts.roboto(
+                                            color: Colors.white, fontSize: 7),
+                                      )),
+                                  Positioned(
+                                      child: Image.asset(
+                                          'assets/images/cakes.png'))
+                                ],
+                              ),
                             ),
                           ),
                         ],

@@ -1,4 +1,6 @@
+import 'package:birthyay/app/model/views/BirthdayScreens/view/GrandPops.dart';
 import 'package:birthyay/app/model/views/emptypage.dart';
+import 'package:birthyay/app/model/views/homescreen/views/homepage.dart';
 import 'package:birthyay/app/model/views/logins/views/login1.dart';
 import 'package:birthyay/app/model/views/splashscreen/splashscreen.dart';
 import 'package:birthyay/app/model/views/welcome/welcome.dart';
@@ -62,6 +64,23 @@ final GoRouter _router =
     name: Routes.login1,
     builder: (context, state) {
       return Login1();
+    },
+  ),
+  GoRoute(
+    path: _AppRoutePaths.homescreen,
+    name: Routes.homeScreen,
+    builder: (context, state) {
+      return HomeScreen(
+        text: 'User',
+        onContainerTap: () => GrandPops(),
+      );
+    },
+  ),
+  GoRoute(
+    path: _AppRoutePaths.homePage,
+    name: Routes.homePage,
+    builder: (context, state) {
+      return HomePage();
     },
   )
 ]);
