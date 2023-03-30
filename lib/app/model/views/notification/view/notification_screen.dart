@@ -11,6 +11,34 @@ class NotificationScreen extends StatefulWidget {
 }
 
 class _NotificationScreenState extends State<NotificationScreen> {
+  List<Map<String, String>> items = [
+    {
+      'title': 'Item 1',
+      'subtitle': 'This is the first item',
+      'imageAsset': 'assets/icons/notification_profile1.png'
+    },
+    {
+      'title': 'Item 2',
+      'subtitle': 'This is the second item',
+      'imageAsset': 'assets/images/notification_profile2.png'
+    },
+    {
+      'title': 'Item 3',
+      'subtitle': 'This is the third item',
+      'imageAsset': 'assets/images/notification_profile3.png'
+    },
+    {
+      'title': 'Item 4',
+      'subtitle': 'This is the fourth item',
+      'imageAsset': 'assets/images/item4.png'
+    },
+    {
+      'title': 'Item 5',
+      'subtitle': 'This is the fifth item',
+      'imageAsset': 'assets/images/item5.png'
+    }
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -99,6 +127,22 @@ class _NotificationScreenState extends State<NotificationScreen> {
                 ],
               )
             ],
+          ),
+        ),
+        SizedBox(
+          height: 30,
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 20),
+          child: Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Earlier',
+              style: GoogleFonts.roboto(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                  color: Color.fromRGBO(53, 15, 80, 1)),
+            ),
           ),
         ),
       ],
