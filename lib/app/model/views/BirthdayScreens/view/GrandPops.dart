@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:go_router/go_router.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class GrandPops extends StatefulWidget {
   const GrandPops({super.key});
@@ -50,6 +51,52 @@ class _GrandPopsState extends State<GrandPops> {
                       ))
                 ],
               ),
+              SizedBox(
+                height: 29,
+              ),
+              Align(
+                alignment: Alignment.center,
+                child: Image.asset('assets/images/p_pic.png'),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Align(
+                alignment: Alignment.center,
+                child: Text(
+                  'Grand Pops',
+                  style: GoogleFonts.roboto(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 16,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Align(
+                alignment: Alignment.center,
+                child: Text(
+                  '83 Years',
+                  style: GoogleFonts.roboto(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 12,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Align(
+                alignment: Alignment.center,
+                child: Text(
+                  'Birthday Today',
+                  style: GoogleFonts.roboto(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 12,
+                  ),
+                ),
+              )
             ],
           ),
         ],
