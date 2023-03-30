@@ -42,6 +42,22 @@ class _NotificationScreenState extends State<NotificationScreen> {
                 ))
           ],
         ),
+        SizedBox(
+          height: 32.5,
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 20),
+          child: Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'New',
+              style: GoogleFonts.roboto(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                  color: Color.fromRGBO(53, 15, 80, 1)),
+            ),
+          ),
+        ),
       ],
     ));
   }
