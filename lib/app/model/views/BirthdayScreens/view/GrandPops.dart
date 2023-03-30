@@ -210,6 +210,59 @@ class _GrandPopsState extends State<GrandPops> {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 10,
+              ),
+              Align(
+                alignment: Alignment.center,
+                child: Container(
+                  height: 50,
+                  width: 350,
+                  decoration: BoxDecoration(
+                      color: Color.fromRGBO(247, 231, 255, 1),
+                      borderRadius: BorderRadius.circular(15)),
+                  child: Row(
+                    children: [
+                      SizedBox(
+                        width: 23.11,
+                      ),
+                      Image.asset('assets/icons/wifi.png'),
+                      SizedBox(
+                        width: 23,
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(right: 37),
+                            child: Text(
+                              'Share Birthday',
+                              style: GoogleFonts.roboto(
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 12,
+                                  color: Color.fromRGBO(53, 15, 80, 1)),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 3,
+                          ),
+                          Text(
+                            'Tell family and friends',
+                            style: GoogleFonts.roboto(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 12,
+                                color: Color.fromRGBO(53, 15, 80, 1)),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        width: 120,
+                      ),
+                      Image.asset('assets/icons/send-2.png')
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ],
