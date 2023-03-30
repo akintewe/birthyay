@@ -58,6 +58,49 @@ class _NotificationScreenState extends State<NotificationScreen> {
             ),
           ),
         ),
+        SizedBox(
+          height: 15,
+        ),
+        Container(
+          height: 80,
+          width: 390,
+          decoration: BoxDecoration(color: Color.fromRGBO(247, 231, 255, 1)),
+          child: Row(
+            children: [
+              Image.asset(
+                'assets/icons/notification_profile.png',
+              ),
+              SizedBox(
+                width: 27,
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Send Grand Pops’ a gift today is his\n83rd birthday',
+                    style: GoogleFonts.roboto(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 14,
+                        color: Color.fromRGBO(53, 15, 80, 1)),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 160),
+                    child: Text(
+                      '13 hours ago',
+                      style: GoogleFonts.roboto(
+                          fontSize: 10,
+                          fontWeight: FontWeight.w600,
+                          color: Color.fromRGBO(200, 80, 192, 1)),
+                    ),
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
       ],
     ));
   }
