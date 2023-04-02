@@ -143,6 +143,7 @@ class _Login2State extends State<Login2> {
                       color: Color.fromRGBO(53, 15, 80, 1)),
                 ),
               ),
+              
             ],
           )
         ],
